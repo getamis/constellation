@@ -20,3 +20,7 @@ RUN stack build --dependencies-only
 
 ADD . $SRC/
 RUN stack install --local-bin-path /usr/local/bin --test
+
+WORKDIR "/root"
+
+ENTRYPOINT ["constellation-node"]
